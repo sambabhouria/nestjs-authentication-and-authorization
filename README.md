@@ -6,7 +6,7 @@ p align="center">
 
 </p>
 
-# Authentication
+# A- Authentication
 
 Authentication is an essential part of most applications. There are many different approaches and strategies to handle authentication.
 
@@ -34,3 +34,13 @@ We're applying the AuthGuard that we just created to the GET /profile route so t
 Ensure the app is running, and test the routes using cURL
 
 5.  <img src="./5-curl.png width="120" alt="curl" />
+
+6.  <img src="./6-aunauthorized.png width="120" alt="curl" />
+
+7.  <img src="./7-authorized-user.png width="120" alt="curl" />
+
+8.  <img src="./8-epire-token.png width="120" alt="curl" />
+
+9.  <img src="./9-get-profile.png width="120" alt="curl" />
+
+# B- Authorization
