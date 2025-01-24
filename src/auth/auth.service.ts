@@ -23,7 +23,7 @@ export class AuthService {
       const token = await this.jwtService.signAsync(payload);
       return { access_token: token };
     } catch (error) {
-      throw new UnauthorizedException(`Token verification failed: ${error}`);
+      throw new UnauthorizedException(`Token verification failed!!: ${error}`);
     }
   }
 }

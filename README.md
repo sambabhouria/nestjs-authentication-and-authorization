@@ -14,10 +14,23 @@ Authentication is an essential part of most applications. There are many differe
 
 We'll start by generating an "AuthModule" and in it, an "AuthService" and an "AuthController". We'll use the "AuthService" to implement the authentication logic, and the AuthController to expose the authentication endpoints.
 
-1.  <img src="./1-auth-module.png" width="120" alt="Nest Logo" />
+1.  <img src="./1-auth-module.png" width="120" alt="auth module" />
 
 ## Creating user module
 
 As we implement the AuthService, we'll find it useful to encapsulate user operations in a UsersService, so let's generate that module and service now:
 
-2.  <img src="./2-user-module.png width="120" alt="Nest Logo" />
+2.  <img src="./2-user-module.png width="120" alt="user module" />
+
+# Implementing the authentication guard
+
+Protecting endpoints by requiring a valid JWT be present on the request.
+We'll do this by creating an AuthGuard that we can use to protect our routes.
+
+2.  <img src="./4-ahtGard.png width="120" alt="auth gard" />
+
+We're applying the AuthGuard that we just created to the GET /profile route so that it will be protected.
+
+Ensure the app is running, and test the routes using cURL
+
+5.  <img src="./5-curl.png width="120" alt="curl" />

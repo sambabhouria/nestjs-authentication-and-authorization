@@ -9,6 +9,7 @@ import { JwtService } from '@nestjs/jwt';
 import { Request } from 'express';
 import { jwtConstants } from './constants';
 import { IS_PUBLIC_KEY } from './decorators/public.decorator';
+import { TokenPayloadDto } from './dtos/token-payload.dto';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
@@ -32,18 +33,33 @@ export class AuthGuard implements CanActivate {
     if (!token) {
       throw new UnauthorizedException();
     }
-
     try {
-      const payload = await this.jwtService.verifyAsync<{ userId: string }>(
+      const payload: TokenPayloadDto = await this.jwtService.verifyAsync(
         token,
         {
           secret: jwtConstants.secret,
         },
       );
+      // 💡 We're assigning the payload to the request object here
+      // so that we can access it in our route handlers
+      console.log('🚀 ~ AuthGuard ~ canActivate ~ payload:', payload);
+
       request['user'] = payload;
-    } catch (err) {
-      throw new UnauthorizedException(`Token verification failed: ${err}`);
+    } catch {
+      throw new UnauthorizedException();
     }
+
+    // try {
+    //   const payload = await this.jwtService.verifyAsync<{ userId: string }>(
+    //     token,
+    //     {
+    //       secret: jwtConstants.secret,
+    //     },
+    //   );
+    //   request['user'] = payload;
+    // } catch (err) {
+    //   throw new UnauthorizedException(`Token verification failed 😤: ${err}`);
+    // }
     return true;
   }
 
