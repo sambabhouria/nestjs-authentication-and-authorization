@@ -44,3 +44,7 @@ Ensure the app is running, and test the routes using cURL
 9.  <img src="./9-get-profile.png width="120" alt="curl" />
 
 # B- Authorization
+
+Authorization refers to the process that determines what a user is able to do. For example, an administrative
+user is allowed to create, edit, and delete posts. A non-administrative user is only authorized to read the posts.
+Authorization is orthogonal and independent from authentication. However, authorization requires an authentication mechanism.

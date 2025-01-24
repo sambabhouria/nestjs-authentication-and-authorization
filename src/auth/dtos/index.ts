@@ -1,3 +1,3 @@
 import { SignInDto } from './sign-in.dto';
-
-export { SignInDto };
+import { TokenPayloadDto } from './token-payload.dto';
+export { SignInDto, TokenPayloadDto };
