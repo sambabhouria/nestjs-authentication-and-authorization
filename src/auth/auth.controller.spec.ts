@@ -41,7 +41,7 @@ describe('AuthController', () => {
       jest
         .spyOn(authService, 'signIn')
         .mockImplementation((username: string, password: string) => {
-          console.log(username, password);
+          console.info(username, password);
           return Promise.resolve({ access_token: 'jwttoken' });
         });
       jest.spyOn(jwtService, 'signAsync').mockResolvedValue('jwttoken');
