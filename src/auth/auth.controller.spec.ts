@@ -85,5 +85,14 @@ describe('AuthController', () => {
       const userProfile = await authController.getProfile(mockPayload);
       expect(userProfile).toStrictEqual(expected);
     });
+
+    it('sigIn get token', async () => {
+      jest
+        .spyOn(authService, 'signIn')
+        .mockResolvedValue({ access_token: 'jwttoken' });
+      await expect(
+        authController.signIn({ username: 'samba', password: 'test' }),
+      ).resolves.toEqual({ access_token: 'jwttoken' });
+    });
   });
 });
