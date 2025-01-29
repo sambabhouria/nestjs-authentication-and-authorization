@@ -78,6 +78,7 @@ describe('UsersService', () => {
       expect(userService.getAllUsers()).toEqual(mockArrayUser);
     });
   });
+
   describe('login', () => {
     it('should return signed jwt token', () => {
       jest.spyOn(jwtService, 'signAsync').mockResolvedValue('test');

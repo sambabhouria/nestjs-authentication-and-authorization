@@ -2,6 +2,7 @@ import {
   ClassSerializerInterceptor,
   Controller,
   Get,
+  Session,
   UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
@@ -22,5 +23,11 @@ export class UserController {
   @UseInterceptors(ClassSerializerInterceptor)
   getAllUsers(): User[] {
     return this.userService.getAllUsers();
+  }
+
+  @Get('/getAuthSession')
+  getUserSession(@Session() session: Record<string, any>) {
+    session.authenticated = true;
+    return session;
   }
 }
