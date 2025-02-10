@@ -28,6 +28,7 @@ export class AuthController {
   @Get('profile')
   @UseGuards(AuthGuard)
   getProfile(@Request() req: { user: TokenPayloadDto }): TokenPayloadDto {
+    // we get this value after login is done req.user is setted
     return req.user;
   }
 }
