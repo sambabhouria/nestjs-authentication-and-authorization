@@ -29,17 +29,17 @@ Protecting endpoints by requiring a valid JWT be present on the request.
 We'll do this by creating an AuthGuard that we can use to protect our routes.
 
 <p align="center">
-  2.  <img src="./4-ahtGard.png "  width="120" height="120"  alt="auth gard" />
+  2.  <img src="./4-ahtGard.png "   alt="auth gard" />
 </p>
 We're applying the AuthGuard that we just created to the GET /profile route so that it will be protected.
 
 Ensure the app is running, and test the routes using cURL
 
 <p align="center">
-  5.  <img src="./5-curl.png " width="120" height="120" alt="curl" />
+  5.  <img src="./5-curl.png "  alt="curl" />
 </p>
 <p align="center">
-  6.  <img src="./6-aunauthorized.png " width="120" height="120" alt="curl" />
+  6.  <img src="./6-aunauthorized.png "  alt="curl" />
 </p>
 <p align="center">
   7.  <img src="./7-authorized-user.png " width="120" height="120" alt="authorized" />
