@@ -14,14 +14,14 @@ Authentication is an essential part of most applications. There are many differe
 We'll start by generating an "AuthModule" and in it, an "AuthService" and an "AuthController". We'll use the "AuthService" to implement the authentication logic, and the AuthController to expose the authentication endpoints.
 
 <p align="center">
-  1.  <img src="./1-auth-module.png" width="120" height="120" alt="auth module" />
+  1.  <img src="./1-auth-module.png"  alt="auth module" />
 </p>
 ## Creating user module
 
 As we implement the AuthService, we'll find it useful to encapsulate user operations in a UsersService, so let's generate that module and service now:
 
 <p align="center">
-  2.  <img src="./2-user-module.png " width="120" height="120"  alt="user module" />
+  2.  <img src="./2-user-module.png " ss  alt="user module" />
 </p>
 # Implementing the authentication guard
 
@@ -42,13 +42,13 @@ Ensure the app is running, and test the routes using cURL
   6.  <img src="./6-aunauthorized.png "  alt="curl" />
 </p>
 <p align="center">
-  7.  <img src="./7-authorized-user.png " width="120" height="120" alt="authorized" />
+  7.  <img src="./7-authorized-user.png "   alt="authorized" />
 </p>
 <p align="center">
-  8.  <img src="./8-epire-token.png " width="120" height="120" alt="expire-token" />
+  8.  <img src="./8-epire-token.png "  alt="expire-token" />
 </p>
 <p align="center">
-  9.  <img src="./9-get-profile.png " width="120" height="120"  alt="get-profile" />
+  9.  <img src="./9-get-profile.png "   alt="get-profile" />
 </p>  
 # B- Authorization
 
